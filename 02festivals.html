@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Swipe Sections</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Festiverse</h1>
+    </header>
+    
+    <div class="container">
+        <button class="arrow left" id="prev">&#10094;</button>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <a href="03diwali.html" class="swiper-slide">
+                    <img src="Diwali.jpg" alt="Image 1">
+                    <h2>Diwali</h2>
+                    <p>Celebrated as the festival of lights, Diwali symbolizes the victory of light over darkness.</p>
+                </a>
+                <a href="04holi.html" class="swiper-slide">
+                    <img src="holi02.webp" alt="Image 2">
+                    <h2>Holi</h2>
+                    <p>Holi is a vibrant festival of colors celebrated to mark the victory of good over evil.</p>
+                </a>
+                <a href="05navratri.html" class="swiper-slide">
+                    <img src="nav02.jpg" alt="Image 3">
+                    <h2>Navratri</h2>
+                    <p>Navratri celebrates the triumph of Goddess Durga over the buffalo demon Mahishasura.</p>
+                </a>
+                <a href="06ganesh.html" class="swiper-slide">
+                    <img src="Ganesh.jpg" alt="Image 4">
+                    <h2>Ganesh Chaturthi</h2>
+                    <p>Ganesh Chaturthi honors Lord Ganesha, the god of beginnings and knowledge.</p>
+                </a>
+                <a href="07eid.html" class="swiper-slide">
+                    <img src="eid.jpg" alt="Image 5">
+                    <h2>Eid-ul-Fitr</h2>
+                    <p>Eid-ul-Fitr marks the end of Ramadan and is celebrated with feasts and prayers.</p>
+                </a>
+                <a href="08christmas.html" class="swiper-slide">
+                    <img src="christmas.jpg" alt="Image 6">
+                    <h2>Christmas</h2>
+                    <p>Christmas celebrates the birth of Jesus Christ and is marked with gifts and family gatherings.</p>
+                </a>
+                <a href="09pongal.html" class="swiper-slide">
+                    <img src="pongal.jpg" alt="Image 7">
+                    <h2>Pongal</h2>
+                    <p>Pongal is a harvest festival celebrated in Tamil Nadu to thank the Sun God for a bountiful harvest.</p>
+                </a>
+                <a href="10raksha.html" class="swiper-slide">
+                    <img src="raksha.jpg" alt="Image 8">
+                    <h2>Raksha Bandhan</h2>
+                    <p>Raksha Bandhan celebrates the bond between brothers and sisters with a sacred thread.</p>
+                </a>
+            </div>
+        </div>
+        <button class="arrow left" id="prev">&#10094;</button>
+        <button class="arrow right" id="next">&#10095;</button>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Festiverse</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('Background02.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 55, 0.6); /* White background with 0.6 opacity */
+    z-index: 1;
+}
+
+header {
+    background-color: rgba(255, 103, 31, 0.6); /* Slightly transparent header */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 400px; /* Increased height to accommodate the paragraph */
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide {
+    flex: 0 0 auto;
+    width: calc(100% - 1px / 3); /* Adjust based on number of visible slides */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 15px; /* Smooth roundings */
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    height: 275px;
+    width: 350px;
+    border-radius: 15px 15px 15px 15px; 
+}
+
+.swiper-slide h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.swiper-slide p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* No background color */
+    color: #333; /* Black text color */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 3;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+footer {
+    background-color: rgba(4, 106, 56, 0.75); /* Slightly transparent footer */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
+    const slides = document.querySelectorAll('.swiper-slide');
+    const slideWidth = slides[0].offsetWidth;
+    const totalSlides = slides.length;
+    const visibleSlides = 3;
+    let currentIndex = 0;
+
+    const nextButton = document.getElementById('next');
+    const prevButton = document.getElementById('prev');
+
+    function updateSwiper() {
+        const offset = -currentIndex * slideWidth;
+        swiperWrapper.style.transform = `translateX(${offset}px)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSwiper();
+    });
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSwiper();
+    });
+
+    // Initial update
+    updateSwiper();
+});
+</script>

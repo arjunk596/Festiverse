@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrating Endangered Languages</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Festiverse</h1>
+        <p>Celebrating Festivals All Across The Ccountry</p>
+    </header>
+
+    <main>
+        <div class="content">
+            <p>Explore the rich tapestry of languages and cultures that are at risk of being lost. Our application aims to document, preserve, and share these invaluable stories through an interactive digital format.</p>
+            <a href="02festivals.html" class="button-image-link">
+                <img src="india_map.jpg" alt="Explore Now">
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Celebrate Festivals. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<style>
+    /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: rgba(255, 103, 31, 0.6);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    position: relative;
+    overflow: hidden;
+}
+
+main::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Background.jpg') no-repeat center center/cover;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+}
+
+.content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.button-image-link img {
+    width: 275px;
+    height: 275px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 50%; /* Makes the image circular */
+    border: 10px solid rgb(45, 45, 191); /* Adds a blue border */
+}
+
+.button-image-link img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+footer {
+    background: rgba(4, 106, 56, 0.75);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+</style>
